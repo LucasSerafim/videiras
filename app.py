@@ -79,7 +79,7 @@ def main():
 
 
     #Classifica a imagem
-    if image:
+    if image is not None:
         previsao(interpreter, image)
 
 if __name__ == '__main__':
