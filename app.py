@@ -17,6 +17,8 @@ def carrega_modelo():
     interpreter = tf.lite.Interpreter(model_path='modelo_quantizado16bits.tflite')
     interpreter.allocate_tensors()
 
+    return interpreter
+
     
 
 def carrega_imagem():
@@ -39,6 +41,8 @@ def carrega_imagem():
 
 
 def previsao(interpreter, image):
+
+
     input_details = interpreter.get_input_details()
     output_details = interpreter.get_output_details()
 
